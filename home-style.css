@@ -1,0 +1,284 @@
+* {
+    border: 0;
+    margin: 0;
+}
+
+body {
+    padding: 40px 20px 8px 20px;
+    max-width: 1200px;
+}
+
+
+@media (max-width: 500px) {
+    h1 {
+        text-align: center;
+    }
+}
+
+
+/* 
+    ==============================
+        Header part of the file 
+    ==============================
+*/
+
+.title-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+}
+
+.top-title {
+    grid-column: 1;
+    font-size: 24px;
+}
+
+.top-buttons-div {
+    align-self: end;
+    justify-self: end;
+}
+
+.title_button {
+    grid-column: 2 / 3;
+    align-self: end;
+}
+
+.title_button:first-child {
+    grid-column: 2;
+}
+
+.title_button:last-child {
+    grid-column: 3;
+}
+
+@media (max-width: 500px) {
+    .title-grid-container {
+        grid-template-columns: 1fr;
+        text-align-last: center;
+    }
+
+    .top-title {
+        grid-column: 1;
+    }
+
+    .title_button {
+        grid-column: 2;
+    }
+
+    .top-buttons-div {
+        align-self: end;
+        justify-self: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* 
+    ==============================
+            Class Content
+    ==============================
+*/
+
+.courses-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.class-container {
+    margin: 0px 4px 8px 4px;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 20px 20px 12px 20px;
+    max-width: 240px;
+    /* max-width: auto; */
+}
+
+.class-container h3 {
+    margin-bottom: 8px;
+}
+
+.class-container button {
+    display: inline-block;
+    padding: 2px 4px 2px 4px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    border: 1px solid black;
+
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.class-container button:hover {
+    background-color: #ddd;
+    color: black;
+    border-color: #888;
+}
+
+@media (max-width: 600px) {
+    .class-container {
+        max-width: 80%;
+        margin: 0px 0 8px 0;
+    }
+
+    .courses-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+/* 
+    ==============================
+            Todo Header
+    ==============================
+*/
+
+.todo-header-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    align-items: center;
+    max-width: 600px;
+}
+
+.todo-header-button-container {
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+}
+
+.todo-header-button-container button {
+    margin: 5px;
+}
+
+@media (max-width: 300px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+.todo-sort-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.todo-sort-button span {
+    padding: 2px;
+}
+
+.todo-sort-button:hover {
+    background-color: lightgray;
+}
+
+.todo-sort-button:active {
+    background-color: #f0f0f0;
+    /* Light gray when pressed */
+    /* You can adjust this color as per your design */
+}
+
+/* 
+    ==============================
+            Todo Body
+    ==============================
+*/
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+
+.checkbox.checked {
+    background-color: #000;
+}
+
+.todo-details {
+    flex: 1;
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.type {
+    flex-grow: 1;
+}
+
+.due-date {
+    text-align: right;
+}
+
+
+
+/* 
+    ==============================
+            Shared styles
+    ==============================
+*/
+
+.button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 999px;
+
+    padding: 8px 16px;
+    margin-bottom: 2px;
+
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.hand-drawn-effect {
+    display: inline-block;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 1em;
+    border: solid 5px #000;
+}
+
+.button:hover {
+    background-color: #ddd;
+    color: black;
+    border-color: #888;
+}
+
+.subtitle-margins {
+    margin: 20px 20px 16px 0;
+}
+
+.hand-drawn {
+    background: transparent;
+    padding: 0.5rem 0.5rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius: 15px 255px;
+}
